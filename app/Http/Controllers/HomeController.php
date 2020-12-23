@@ -92,7 +92,10 @@ class HomeController extends Controller
         //     dump($key->title);
         // }
 
-        return view('home', []);
+
+        $title = 'Home Page'; 
+        $h1 = '<h1>home page</h1>';
+        return view('home', compact('title', 'h1'));
     }
 
     public function test()

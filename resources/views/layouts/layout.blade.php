@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
-    <title>Album example · Bootstrap v5.0</title>
+    <title>@section('title')My Site @show</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -25,8 +25,7 @@
     
 <header>
     @section('header')
-        
-   
+
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
       <div class="row">
