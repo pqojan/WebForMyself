@@ -8,12 +8,25 @@
 @section('content')
     @section('header')
         @parent
-        123
+       
     @endsection
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        {!! $h1 !!}
+        {{-- @if (count($data1) > 1)
+            ok
+        @endif --}}
+        {{-- @isset($data2)
+            isset data2
+        @endisset --}}
+        {{-- @production
+           <h1>Production</h1>    
+        @endproduction --}}
+        {{-- @env('local')
+            local
+        @endenv --}}
+        
+
       </div>
     </div>
   </section>
