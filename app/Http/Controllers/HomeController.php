@@ -94,19 +94,17 @@ class HomeController extends Controller
 
 
         $title = 'Home Page'; 
-        // $h1 = '<h1>home page</h1>';
-        // $data1 = range(1,20);
-        // $data2 = [
-        //     'title' => 'Title',
-        //     'content' => 'Content',
-        //     'keys' => 'Keywords'
-        // ];
         $posts = Post::orderBy('id','desc')->get();
         return view('home', compact('title','posts'));
     }
 
-    public function test()
+    public function create()
     {
-        return __METHOD__;
+      return view('create');
+    }
+
+    public function store(Request $request)
+    { 
+       return redirect()->route('home');
     }
 }
