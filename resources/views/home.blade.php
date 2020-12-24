@@ -1,3 +1,5 @@
+
+
 @extends('layouts.layout')
 
 @section('title')
@@ -51,6 +53,8 @@
                 </div>
                 <small class="text-muted">
                   {{-- {{ $item->created_at }} --}}
+                  {{-- {{ \Carbon\Carbon::createFromFormat('Y-m-d H:m:s',$item->created_at)->format('d.m.Y') }} --}}
+                  {{ $item->getPostDate() }}
                 </small>
               </div>
             </div>
