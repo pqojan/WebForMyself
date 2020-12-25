@@ -100,11 +100,15 @@ class HomeController extends Controller
 
     public function create()
     {
-      return view('create');
+      $title = 'Creeate Post';
+      $rubric = Rubric::pluck('title','id')->all();
+      return view('create',compact('title','rubric'));
     }
 
     public function store(Request $request)
     { 
-       return redirect()->route('home');
+      dump($request->input('title'));
+      //  return redirect()->route('home');
     }
 }
+
