@@ -16,7 +16,7 @@ class Post extends Model
     // protected $attributes = [
     //     'content' => 'Lorem ipsum 1'
     // ];
-    protected $fillable = ['title', 'content'];
+    protected $fillable = ['title', 'content', 'rubric_id'];
     
     public function rubric(){
        return $this->belongsTo(Rubric::class);

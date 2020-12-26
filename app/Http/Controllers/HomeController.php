@@ -107,8 +107,17 @@ class HomeController extends Controller
 
     public function store(Request $request)
     { 
-      dump($request->input('title'));
-      //  return redirect()->route('home');
+      // dump($request->input('title'));
+
+      // $title = $request->input('title');
+      // $post = new Post;
+      // $post->title = $title;
+      // $post->rubric_id = 1;
+      // $post->save();
+
+      Post::create($request->all());
+      // dd($request->all());
+       return redirect()->route('home');
     }
 }
 
