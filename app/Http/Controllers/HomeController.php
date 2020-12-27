@@ -10,6 +10,7 @@ use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 use PDO;
 
 class HomeController extends Controller
@@ -120,6 +121,22 @@ class HomeController extends Controller
         'content' => 'required',
         'rubric_id' => 'integer'
       ]);
+
+      // $rules = [
+      //   'title' => 'required|min:5|max:100',
+      //   'content' => 'required',
+      //   'rubric_id' => 'integer'
+      // ];
+
+      // $messages = [
+      //   'title.required' => 'lracreq titl@',
+      //   'title.min' => 'minimum 5 simvol',
+      //   'content.requiered' => 'lracreq content@',
+      //   'rubric_id.integer' => 'menak tarer'
+
+      // ];
+
+      // $validator = Validator::make($request->all(),$rules,$messages)->validate();
 
       Post::create($request->all());
       // dd($request->all());
