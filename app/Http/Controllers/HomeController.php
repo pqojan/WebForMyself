@@ -6,6 +6,7 @@ use App\City;
 use App\Country;
 use App\Post;
 use App\Rubric;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
@@ -114,6 +115,11 @@ class HomeController extends Controller
       // $post->title = $title;
       // $post->rubric_id = 1;
       // $post->save();
+      $this->validate($request,[
+        'title' => 'required|min:5|max:100',
+        'content' => 'required',
+        'rubric_id' => 'integer'
+      ]);
 
       Post::create($request->all());
       // dd($request->all());
