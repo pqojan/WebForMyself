@@ -9,13 +9,15 @@ use App\Rubric;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use PDO;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         dump($_ENV['DB_DATABASE']);
         // $query = DB::insert('INSERT INTO posts (title, content) VALUES (?, ?)', ['title 5', 'Lorem ipsum s...']);
@@ -94,7 +96,16 @@ class HomeController extends Controller
         //     dump($key->title);
         // }
 
+      // session()->forget('cart');
+      // $request->session()->push('cart', ['id'=>'Narek']);
+      // dump(session()->all());
 
+        // Cookie::queue('test', 'test cookie', 2);
+        // dump($request->cookie('test'));
+
+        Cache::put('name','value', 60);
+        dump(Cache::get('name'));
+        
         $title = 'Home Page'; 
         $posts = Post::orderBy('id','desc')->get();
         return view('home', compact('title','posts'));
@@ -139,6 +150,7 @@ class HomeController extends Controller
       // $validator = Validator::make($request->all(),$rules,$messages)->validate();
 
       Post::create($request->all());
+      session()->flash('success','added successfully');
       // dd($request->all());
        return redirect()->route('home');
     }
