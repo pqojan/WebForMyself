@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '3e4a7bc9e4c64fa1a081fa815c27cf175b72e17d',
+    'reference' => 'bb100cb70da63551685fe6efe19bf87816edeaf2',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -51,6 +51,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '283a40c901101e66de7061bd359252c013dcc43c',
+    ),
+    'composer/package-versions-deprecated' => 
+    array (
+      'pretty_version' => '1.11.99.1',
+      'version' => '1.11.99.1',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7413f0b55a051e89485c5cb9f765fe24bb02a7b6',
     ),
     'cordoval/hamcrest-php' => 
     array (
@@ -86,12 +95,12 @@ private static $installed = array (
     ),
     'doctrine/dbal' => 
     array (
-      'pretty_version' => '2.12.1',
-      'version' => '2.12.1.0',
+      'pretty_version' => '3.0.0',
+      'version' => '3.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'adce7a954a1c2f14f85e94aed90c8489af204086',
+      'reference' => 'ee6d1260d5cc20ec506455a585945d7bdb98662c',
     ),
     'doctrine/event-manager' => 
     array (
@@ -472,7 +481,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '3e4a7bc9e4c64fa1a081fa815c27cf175b72e17d',
+      'reference' => 'bb100cb70da63551685fe6efe19bf87816edeaf2',
     ),
     'laravel/tinker' => 
     array (
@@ -567,6 +576,13 @@ private static $installed = array (
       array (
       ),
       'reference' => '7c125dc2463f3e144ddc7e05e63077109508c94e',
+    ),
+    'ocramius/package-versions' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '1.11.99',
+      ),
     ),
     'opis/closure' => 
     array (
