@@ -38,7 +38,23 @@
           <ul class="list-unstyled">
             <li><a href="{{ route('home') }}" class="text-white">Home</a></li>
             <li><a href="{{ route('page.about') }}" class="text-white">About</a></li>
+
+            @auth
+              <a href="">{{ auth()->user()->name }}</a>
+              <li><a href="{{ route('logout') }}" class="text-white">Logout</a></li>
+            @endauth
+
+            @guest
+              <li><a href="{{ route('login.create') }}" class="text-white">Login</a></li>
+              <li><a href="{{ route('register.create') }}" class="text-white">Register</a></li>
+            @endguest
+            
           </ul>
+
+         @php
+             dump(Auth::check())
+         @endphp
+
         </div>
       </div>
     </div>
