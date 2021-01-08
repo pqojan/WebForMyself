@@ -29,4 +29,5 @@ class Post extends Model
     public function getPostDate(){
         return Carbon::parse($this->created_at)->diffForHumans();
     }
+
 }

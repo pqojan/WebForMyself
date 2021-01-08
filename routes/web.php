@@ -61,7 +61,6 @@ Route::resource('posts','PostController');
 Route::match(['get','post'], '/send', 'ContactController@send');
 
 
-
 Route::get('/logout', 'UserController@logout')->name('logout')->middleware('auth');
 
 
