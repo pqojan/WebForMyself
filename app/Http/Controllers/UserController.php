@@ -20,14 +20,19 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed'
+            'password' => 'required|confirmed',
+            'avatar' => 'nullable|image'
         ]);
+
+       $avatar = $request->file('avatar')->store('images');
        
      $user = User::create([
            'name' => $request->name,
            'email' => $request->email,
-           'password' => Hash::make($request->password)
+           'password' => Hash::make($request->password),
+           'avatar' => $avatar
        ]);
+
        session()->flush('success','REGISTERED!');
        Auth::login($user);
        return redirect()->route('home');
