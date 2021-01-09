@@ -103,11 +103,12 @@ class HomeController extends Controller
         // Cookie::queue('test', 'test cookie', 2);
         // dump($request->cookie('test'));
 
-        Cache::put('name','value', 60);
-        dump(Cache::get('name'));
+        // Cache::put('name','value', 60);
+        // dump(Cache::get('name'));
+
         
         $title = 'Home Page'; 
-        $posts = Post::orderBy('id','desc')->get();
+        $posts = Post::orderBy('id','desc')->paginate(3);
         return view('home', compact('title','posts'));
     }
 
@@ -127,6 +128,7 @@ class HomeController extends Controller
       // $post->title = $title;
       // $post->rubric_id = 1;
       // $post->save();
+
       $this->validate($request,[
         'title' => 'required|min:5|max:100',
         'content' => 'required',

@@ -24,13 +24,17 @@ class UserController extends Controller
             'avatar' => 'nullable|image'
         ]);
 
-       $avatar = $request->file('avatar')->store('images');
+        if($request->hasFile('avatar')){
+           $folder = date('Y-m-d');
+        }
+
+       $avatar = $request->file('avatar')->store("images/$folder");
        
      $user = User::create([
            'name' => $request->name,
            'email' => $request->email,
            'password' => Hash::make($request->password),
-           'avatar' => $avatar
+           'avatar' => $avatar ?? null
        ]);
 
        session()->flush('success','REGISTERED!');

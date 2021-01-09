@@ -40,7 +40,7 @@
             <li><a href="{{ route('page.about') }}" class="text-white">About</a></li>
 
             @auth
-              <a href="">{{ auth()->user()->name }}</a>
+              <a href="">{{ auth()->user()->name }}</a> <img src="storage/{{auth()->user()->avatar}}" alt="" width="50px">
               <li><a href="{{ route('logout') }}" class="text-white">Logout</a></li>
             @endauth
 

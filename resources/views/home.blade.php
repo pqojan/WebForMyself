@@ -42,16 +42,17 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 <small class="text-muted">
-                  {{-- {{ $item->created_at }} --}}
-                  {{-- {{ \Carbon\Carbon::createFromFormat('Y-m-d H:m:s',$item->created_at)->format('d.m.Y') }} --}}
                   {{ $item->getPostDate() }}
                 </small>
               </div>
             </div>
           </div>
         </div>
+      
         @endforeach
-
+        <div class="col-md-12">
+          {{ $posts->appends(['test'=> request()->test])->links() }}
+        </div>
       </div>
     </div>
   </div>
