@@ -47,11 +47,17 @@ return [
             'level' => 'debug',
         ],
 
+        'sqllogs' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/sql.log'),
+            'level' => 'debug',
+        ],
+
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
-            'days' => 14,
+            'days' => 1,
         ],
 
         'slack' => [

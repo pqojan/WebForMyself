@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'bb100cb70da63551685fe6efe19bf87816edeaf2',
+    'reference' => '3d4b9acee927764bb2dfcf5ed48d519c1f425e4a',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -42,6 +42,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8d8f88b3b3830916be94292c1fbce84433efb1aa',
+    ),
+    'barryvdh/laravel-debugbar' => 
+    array (
+      'pretty_version' => 'v3.5.2',
+      'version' => '3.5.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'cae0a8d1cb89b0f0522f65e60465e16d738e069b',
     ),
     'brick/math' => 
     array (
@@ -481,7 +490,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'bb100cb70da63551685fe6efe19bf87816edeaf2',
+      'reference' => '3d4b9acee927764bb2dfcf5ed48d519c1f425e4a',
     ),
     'laravel/tinker' => 
     array (
@@ -518,6 +527,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '353f66d7555d8a90781f6f5e7091932f9a4250aa',
+    ),
+    'maximebf/debugbar' => 
+    array (
+      'pretty_version' => 'v1.16.4',
+      'version' => '1.16.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c86c717e4bf3c6d98422da5c38bfa7b0f494b04c',
     ),
     'mockery/mockery' => 
     array (
@@ -1013,6 +1031,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'f789e7ead4c79e04ca9a6d6162fc629c89bd8054',
+    ),
+    'symfony/debug' => 
+    array (
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5dfc7825f3bfe9bb74b23d8b8ce0e0894e32b544',
     ),
     'symfony/deprecation-contracts' => 
     array (
