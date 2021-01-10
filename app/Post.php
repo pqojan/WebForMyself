@@ -3,6 +3,7 @@
 namespace App;
 
 use Attribute;
+use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
@@ -26,8 +27,22 @@ class Post extends Model
         return $this->belongsToMany(Tag::class);
     }
 
-    public function getPostDate(){
+    public function getPostDate()
+    {
         return Carbon::parse($this->created_at)->diffForHumans();
     }
 
+
+    public function setTitleAttribute($value)
+    {
+    $this->attributes['title'] = Str::title($value);
+
+    }
+    public function getTitleAttribute($value)
+    {
+    return Str::upper($value);
+    }
+    
+    
 }
+
